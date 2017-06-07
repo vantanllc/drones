@@ -1,3 +1,4 @@
+# dump
 # Betaflight / OMNIBUS 3.1.7 Apr  3 2017 / 22:14:20 (e1c4b5c)
 name -
 resource BEEPER 1 C15
@@ -221,7 +222,7 @@ mode_color 6 8 0
 mode_color 6 9 0
 mode_color 6 10 0
 mode_color 7 0 3
-aux 0 0 0 1500 2100
+aux 0 0 0 1700 2100
 aux 1 1 1 900 1500
 aux 2 0 0 900 900
 aux 3 0 0 900 900
@@ -292,9 +293,9 @@ set input_filtering_mode = OFF
 set fpv_mix_degrees = 0
 set max_aux_channels = 14
 set debug_mode = NONE
-set min_throttle = 1070
+set min_throttle = 1185
 set max_throttle = 2000
-set min_command = 1000
+set min_command = 1100
 set digital_idle_percent =  4.500
 set 3d_deadband_low = 1406
 set 3d_deadband_high = 1514
