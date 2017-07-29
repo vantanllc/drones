@@ -103,6 +103,7 @@ feature -FEATURE_ANTI_GRAVITY
 feature VBAT
 feature RX_SERIAL
 feature FAILSAFE
+feature CURRENT_METER
 beeper GYRO_CALIBRATED
 beeper RX_LOST
 beeper RX_LOST_LANDING
@@ -123,7 +124,7 @@ beeper SYSTEM_INIT
 beeper ON_USB
 map TAER1234
 serial 20 1 115200 57600 0 115200
-serial 0 0 115200 57600 0 115200
+serial 0 1 115200 57600 0 115200
 serial 1 0 115200 57600 0 115200
 serial 2 64 115200 57600 0 115200
 led 0 0,0::C:0
@@ -222,8 +223,8 @@ mode_color 6 8 0
 mode_color 6 9 0
 mode_color 6 10 0
 mode_color 7 0 3
-aux 0 0 0 1700 2100
-aux 1 1 1 900 1500
+aux 0 0 0 1500 2100
+aux 1 1 1 1300 2100
 aux 2 0 0 900 900
 aux 3 0 0 900 900
 aux 4 0 0 900 900
@@ -281,8 +282,8 @@ rxfail 16 h
 rxfail 17 h
 set task_statistics = ON
 set mid_rc = 1500
-set min_check = 1100
-set max_check = 1900
+set min_check = 1005
+set max_check = 2000
 set rssi_channel = 0
 set rssi_scale = 30
 set rc_interp = AUTO
@@ -293,9 +294,9 @@ set input_filtering_mode = OFF
 set fpv_mix_degrees = 0
 set max_aux_channels = 14
 set debug_mode = NONE
-set min_throttle = 1185
+set min_throttle = 1070
 set max_throttle = 2000
-set min_command = 1100
+set min_command = 1000
 set digital_idle_percent =  4.500
 set 3d_deadband_low = 1406
 set 3d_deadband_high = 1514
@@ -304,7 +305,7 @@ set 3d_deadband_throttle = 50
 set use_unsynced_pwm = OFF
 set motor_pwm_protocol = OFF
 set motor_pwm_rate = 480
-set disarm_kill_switch = ON
+set disarm_kill_switch = OFF
 set gyro_cal_on_first_arm = OFF
 set auto_disarm_delay = 5
 set small_angle = 25
@@ -313,7 +314,7 @@ set reboot_character = 82
 set serial_update_rate_hz = 100
 set beeper_inversion = ON
 set beeper_od = OFF
-set serialrx_provider = SPEK2048
+set serialrx_provider = SBUS
 set sbus_inversion = ON
 set spektrum_sat_bind = 0
 set spektrum_sat_bind_autorst = 1
@@ -365,7 +366,7 @@ set imu_dcm_ki = 0
 set alt_hold_deadband = 40
 set alt_hold_fast_change = ON
 set deadband = 0
-set yaw_deadband = 0
+set yaw_deadband = 2
 set thr_corr_value = 0
 set thr_corr_angle = 800
 set yaw_control_direction = 1
